@@ -71,7 +71,7 @@ def download_files(df,findlist, file_name):
     file_names = ["case-info_"+s for s in file_names]
 
     print(f"found {len(idlist)} files")
-    print("starting file download")
+    print("starting file downloads...")
 
     for ids,file_name in zip(idlist,file_names):
         request = service.files().get_media(fileId=ids)
@@ -89,8 +89,9 @@ def download_files(df,findlist, file_name):
         with open(f"{file_name}.csv", 'wb') as f:
             f.write(fh.read())
             f.close()
-        
-    print('file download complete')
+        print(f'{file_name} downloaded')
+
+    print('All file downloads complete')
 
 
 def get_gdrive_service(cjson):
@@ -138,9 +139,9 @@ filename = f"{pdffile}"
 datadrop_url = parse_pdf(filename)
 
 download_url = requests.get(datadrop_url).url
-print(download_url)
+print("found link: {download_url}")
 
-#extracts the file_id from the url link
+# extracts the file_id from the url link
 file_id = download_url.split('?')[0].split('/')[-1]
 
 files = listFiles(service, file_id)
@@ -148,3 +149,11 @@ df = pd.DataFrame(files)
 
 findcaseinfo = ['Case Information']
 download_files(df,findcaseinfo,"case-info_")
+
+caseinfo_files = glob.glob("case-info_**.csv")
+print(caseinfo_files)
+
+caseinfo = pd.concat(map(pd.read_csv, caseinfo_files))
+
+caseinfo.to_csv('case-info-full.csv',index = False)
+

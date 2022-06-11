@@ -1,5 +1,7 @@
 # COV1D-19 Philippine Data Pipeline
 
+# Description and Objective
+
 These are the scripts used for a centralized data pipeline using Philippine COVID-19 data that is deployed in our GCP project for the second sprint for the ESK DEBC1. 
 
 The scripts are run once day at XX:XX:XX AM UTC+8
@@ -12,3 +14,14 @@ The scripts are run once day at XX:XX:XX AM UTC+8
 - Non-aggregated data sources: 
   - Republic of Philippines Department of Health: https://doh.gov.ph/covid19tracker
   - Philippine Statistics Authority: https://psa.gov.ph/issip-stat-domain/demographic-and-social-statistics
+
+
+# Dynamic Use of the APIs 
+* Insert challenges encountered with APIs
+* add a general guide on how we can troubleshoot the API if may issues
+* how to modify code for the APIs
+
+# How to Configure the Scheduled Pulls / information  
+
+# Use cases for the data 
+

@@ -30,3 +30,20 @@ for csv in csvs:
     upload_to_bucket(csv,filename, bucket_name)
     os.remove(filename)
     print(f"{filename} has been uploaded")
+
+# Upload DOH data & cleanout datadrop/files
+base_path2 = "/home/sprint2-covid-project/datadrop/files"
+csvs2 = os.listdir(base_path2)
+for csv in csvs2:
+    files = f"{base_path2}/{csv}"
+    if csv == "case-info-full.csv":
+        doh_file = f"{base_path2}/{csv}"
+        upload_to_bucket("case-info-full.csv",doh_file, bucket_name)
+        os.remove(doh_file)
+        print(f"{doh_file} has been uploaded")
+    else:
+        if files.isfile():
+            os.remove(files)
+        else:
+            os.rmdir(files)
+    

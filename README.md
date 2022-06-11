@@ -9,6 +9,7 @@ The scripts are run once day at XX:XX:XX AM UTC+8
 **Data Sources**: This list is the complete list of sources that the data is pulled from.
 - Aggregated data sources:
   - Fact Rackers News: https://www.factrakers.org/search-results?q=Covid
+  - Covid 19- Fact Checks Rappler:https://www.rappler.com/topic/covid-19-fact-checks/
   - COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University: https://github.com/CSSEGISandData/COVID-19
   - Our World In Data: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Philippines.csv
 - Non-aggregated data sources: 
@@ -25,3 +26,8 @@ The scripts are run once day at XX:XX:XX AM UTC+8
 
 # Use cases for the data 
 
+# Webscraping 
+* Limitations: Each script is applicable to a specific website domain (e.g rappler.py: https://www.rappler.com/topic/covid-19-fact-checks/, factrackers.py:https://www.factrakers.org/search-results?q=Covid)
+* How to run:
+  - python rappler.py
+  - python factrackers.py

@@ -132,14 +132,16 @@ folder_id = "1ZPPcVU4M7T-dtRyUceb0pMAd8ickYf8o"
 url = "https://drive.google.com/drive/folders/1ZPPcVU4M7T-dtRyUceb0pMAd8ickYf8o"
 gdown.download_folder(url, quiet=True, use_cookies=False)
 
-pdffile = glob.glob(r"*/*.pdf")[0]
+pdffile = glob.glob(r"READ ME FIRST/*.pdf")
+print(pdffile)
+
 
 filename = f"{pdffile}"
 
 datadrop_url = parse_pdf(filename)
 
 download_url = requests.get(datadrop_url).url
-print("found link: {download_url}")
+print(f"found link: {download_url}")
 
 # extracts the file_id from the url link
 file_id = download_url.split('?')[0].split('/')[-1]

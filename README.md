@@ -25,8 +25,19 @@ The scripts are run once day at XX:XX:XX AM UTC+8
 
 # Dynamic Use of the APIs 
 * Insert challenges encountered with APIs
+
+The script `datadrop.py` will not run if: 
+1. Google Drive API is not enabled on the user
+2. User does not have an oauth key
+
+On first use, a google drive authentication screen will popup. A token.pickle will be used instead for future use.
+
 * add a general guide on how we can troubleshoot the API if may issues
-* how to modify code for the APIs
+For issues, refer to the API documentation by Google: https://developers.google.com/drive/api/guides/about-sdk
+
+* how to modify files for use of the APIs 
+for use of Gdrive API, enable via GCP APIs & Services and then create an oauth client ID under Credentials
+add and rename oauth client ID json file to datadrop directory as client_secret_file.json 
 
 # How to Configure the Scheduled Pulls / information  
 

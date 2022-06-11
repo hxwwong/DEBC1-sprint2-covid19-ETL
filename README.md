@@ -9,6 +9,7 @@ The scripts are run once day at XX:XX:XX AM UTC+8
 **Data Sources**: This list is the complete list of sources that the data is pulled from.
 - Aggregated data sources:
   - Fact Rackers News: https://www.factrakers.org/search-results?q=Covid
+  - Covid 19- Fact Checks Rappler:https://www.rappler.com/topic/covid-19-fact-checks/
   - COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University: https://github.com/CSSEGISandData/COVID-19
   - Our World In Data: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Philippines.csv
 - Non-aggregated data sources: 
@@ -39,3 +40,8 @@ Pan, Y., Zhang, L., Yan, Z., Lwin, M. O., & Skibniewski, M. J. (2021b). Discover
 
 Tiwari, A., Dadhania, A. V., Ragunathrao, V. A. B., & Oliveira, E. R. A. (2021). Using machine learning to develop a novel COVID-19 Vulnerability Index (C19vi). Science of The Total Environment, 773, 145650. https://doi.org/10.1016/j.scitotenv.2021.145650
 
+# Webscraping 
+* Limitations: Each script is applicable to a specific website domain (e.g rappler.py: https://www.rappler.com/topic/covid-19-fact-checks/, factrackers.py:https://www.factrakers.org/search-results?q=Covid)
+* How to run:
+  - python rappler.py
+  - python factrackers.py

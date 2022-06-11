@@ -42,3 +42,5 @@ while True:
         break
 #convert to dataframe
 df = pd.DataFrame(article_ls)
+#export data frame
+df.to_csv('Factraker_results.csv')

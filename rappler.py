@@ -45,3 +45,5 @@ for i in range(1, page):
 df = pd.DataFrame(article_ls)
 #convert object type date to date format
 df['date'] = pd.to_datetime(df['date'].str.replace(' PHT', ''))
+
+df.to_csv('rappler_results.csv')

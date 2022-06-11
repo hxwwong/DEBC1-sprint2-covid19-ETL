@@ -1,4 +1,7 @@
 # COV1D-19 Philippine Data Pipeline
+This project was done in accordindance with the requirements of Sprint 2 of the Data Engineering Bootcamp - Cohort 1. 
+
+This group is composed of Bono, Jake, Hans, Nico, and Neil. 
 
 # Description and Objective
 
